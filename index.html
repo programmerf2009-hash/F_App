@@ -105,7 +105,7 @@ input[aria-invalid=true]{border-color:var(--bad)}
 .shl button{display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;background:none;border:0;border-radius:12px;padding:12px;color:var(--tx);font:500 15px inherit;font-family:inherit;cursor:pointer}.shl button:hover{background:var(--line)}.shl small{color:var(--mu);font-weight:400;font-size:13px}
 @media (min-width:640px){.sv{grid-template-columns:repeat(8,1fr)}.top{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.ov{align-items:center}.sp{border-radius:24px}}
 @media (min-width:900px){#home{display:grid;grid-template-columns:92px 1fr;grid-template-rows:auto 1fr}.hd{grid-column:1/-1;padding-left:28px;padding-right:28px}.nb{grid-column:1;grid-row:2;grid-template-columns:none;grid-auto-rows:64px;align-content:start;gap:6px;padding:16px 8px;border-top:0;border-right:1px solid var(--line)}.ct{grid-column:2;grid-row:2;padding:26px 32px}.car{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));overflow:visible}.nc{flex:none}#toast{bottom:28px}.tb{width:60px;height:60px}}
-</style></head><body>
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--tb);border:1px solid var(--line);color:var(--mu)}.hd .ib{margin-left:auto;margin-right:6px}.wx{cursor:pointer}</style></head><body>
 <div class="wave" style="top:24%" aria-hidden="true"></div><div class="wave" style="top:64%" aria-hidden="true"></div>
 <canvas id="s" aria-hidden="true"></canvas>
 
@@ -143,12 +143,11 @@ input[aria-invalid=true]{border-color:var(--bad)}
 </div></main>
 
 <div id="home" hidden>
-<header class="hd"><div class="hb"><img class="mark" alt="" src=""><span>F App</span></div><button class="ib" id="sb" type="button" aria-label="Qidirish"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button></header>
+<header class="hd"><div class="hb"><img class="mark" alt="" src=""><span>F App</span></div><button class="ib" id="sb" type="button" aria-label="Qidirish"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button><span class="av" role="img" aria-label="Profil rasmi uchun joy"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.4 7-5.4s6.2 1.8 7 5.4"/></svg></span></header>
 <main class="ct"><div class="wrap">
-<div class="top"><section class="card cur" id="cur" aria-label="Valyuta kursi"></section><section class="wx" id="wx" aria-label="Ob-havo"></section></div>
+<div class="top"><section class="card cur" id="cur" aria-label="Valyuta kursi"></section><section class="wx" id="wx" role="button" tabindex="0" aria-label="Ob-havo. Shaharni o’zgartirish uchun bosing"></section></div>
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>So’nggi yangiliklar</h2><p class="sn">Yangiliklar manbasi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="news"></div></section>
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Do’kon chegirmalari</h2><p class="sn">Mahsulotlar katalogi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="deals"></div></section>
-<section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Xizmatlar</h2><div class="sv" id="sv"></div></section>
 </div></main>
 <nav class="nb" aria-label="Asosiy menyu">
 <button type="button" class="on" aria-current="page"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>Bosh sahifa</button>
@@ -257,7 +256,6 @@ $('#shq').addEventListener('input',drawSheet);$('#shx').onclick=closeSheet;
 $('#sheet').addEventListener('click',function(e){if(e.target===this)closeSheet()});
 $('#shl').addEventListener('click',function(e){var b=e.target.closest('button');if(b){var k=b.dataset.k;closeSheet();shP(k)}});
 addEventListener('keydown',function(e){if(e.key==='Escape'&&!$('#sheet').hidden)closeSheet()});
-$('#sb').onclick=function(){openSheet('Qidirish','Xizmatni qidiring…',function(v){return SV.map(function(s,i){return [i,s[0]]}).filter(function(x){return x[1].toLowerCase().indexOf(v)>=0})},function(k){toast(SV[k][0]+' — tez orada')})};
 document.querySelectorAll('.nb button[data-t]').forEach(function(b){b.onclick=function(){toast(b.dataset.t)}});
 
 /* Valyuta kursi: open.er-api.com (kuniga bir marta yangilanadi) */
@@ -281,7 +279,7 @@ async function loadRates(){if(R&&R.f&&Date.now()-R.f<1800000){renderCur('ok');re
  catch(e){if(R){R.off=true;renderCur('ok')}else renderCur('err')}}
 
 /* Ob-havo: Open-Meteo + joylashuv */
-var WK='fapp_wx',W=null,WI={sun:'<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>',moon:'<path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/>',cloud:'<path d="M7 19h10a4 4 0 00.6-7.95A5.5 5.5 0 007 10.5 4.3 4.3 0 007 19z"/>'};
+var WK='fapp_wx2',W=null,WI={sun:'<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>',moon:'<path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/>',cloud:'<path d="M7 19h10a4 4 0 00.6-7.95A5.5 5.5 0 007 10.5 4.3 4.3 0 007 19z"/>'};
 try{W=JSON.parse(localStorage.getItem(WK))}catch(e){}
 function wcode(c){return c<=1?['clear',c?'Asosan ochiq':'Ochiq']:c===2?['part','Qisman bulutli']:c===3?['cloud','Bulutli']:c<=48?['fog','Tuman']:c<=57?['rain','Yengil yomg’ir']:c<=67?['rain','Yomg’ir']:c<=77?['snow','Qor']:c<=82?['rain','Jala']:c<=86?['snow','Qor']:['storm','Momaqaldiroq']}
 function wicon(k,day){var s=day?WI.sun:WI.moon,C=WI.cloud;return k==='clear'?s:k==='part'?'<g transform="translate(-1 -2) scale(.7)">'+s+'</g><g transform="translate(4 3) scale(.8)">'+C+'</g>':k==='fog'?'<path d="M4 9h16M3 13h18M5 17h14"/>':k==='rain'?C+'<path d="M8 21l1-2M12 21l1-2M16 21l1-2"/>':k==='snow'?C+'<path d="M8 21h.01M12 21h.01M16 21h.01" stroke-width="2.4"/>':k==='storm'?C+'<path d="M12 18.5l-1.5 2.5h3L12 23.5"/>':C}
@@ -290,22 +288,30 @@ function renderWx(st){var el=$('#wx');
  if(st==='load'&&!W){el.innerHTML='<div style="flex:1"><div class="sk" style="height:22px;width:45%"></div><div class="sk" style="height:56px;width:35%;margin-top:14px"></div><div class="sk" style="height:14px;width:60%;margin-top:16px"></div></div>';return}
  if(st==='err'&&!W){el.innerHTML='<div><h2>Ob-havo</h2><p class="cd">Ob-havoni yuklab bo’lmadi. Internetni tekshiring.</p><button class="rb" type="button" id="wr">Qayta urinish</button></div>';$('#wr').onclick=startWx;return}
  var w=wcode(W.c),n=function(x){return Math.round(x)+'°'};
- el.innerHTML='<div><h2>'+W.city+'</h2><div class="tm">'+n(W.t)+'</div><div class="cd">'+w[1]+' · '+wday(W.time)+'</div><div class="sb">His qilinadi '+n(W.f)+' · '+n(W.hi)+' / '+n(W.lo)+'</div>'+(W.fb?'<div class="fb">Joylashuvga ruxsat berilmagan, Toshkent ko’rsatilmoqda.</div>':'')+(W.off?'<div class="fb">Oflayn: oxirgi saqlangan ma’lumot.</div>':'')+'</div><svg class="wi" viewBox="0 0 24 24" aria-hidden="true">'+wicon(w[0],W.d)+'</svg>'}
-async function wx(lat,lon,fb){renderWx('load');
+ el.innerHTML='<div><h2>'+W.city+'</h2><div class="tm">'+n(W.t)+'</div><div class="cd">'+w[1]+' · '+wday(W.time)+'</div><div class="sb">His qilinadi '+n(W.f)+' · '+n(W.hi)+' / '+n(W.lo)+'</div>'+'<div class="fb">'+(W.fb?'Joylashuv aniqlanmadi. Shaharni tanlash uchun bosing.':'Shaharni o’zgartirish uchun bosing')+'</div>'+(W.off?'<div class="fb">Oflayn: oxirgi saqlangan ma’lumot.</div>':'')+'</div><svg class="wi" viewBox="0 0 24 24" aria-hidden="true">'+wicon(w[0],W.d)+'</svg>'}
+var UZ=[['Toshkent','Toshkent shahri',41.3111,69.2797],['Andijon','Andijon viloyati',40.7821,72.3442],['Shahrixon','Andijon viloyati',40.7133,72.0550],['Asaka','Andijon viloyati',40.6419,72.2386],['Xonobod','Andijon viloyati',40.8,73.0],['Namangan','Namangan viloyati',40.9983,71.6726],['Farg’ona','Farg’ona viloyati',40.3842,71.7843],['Qo’qon','Farg’ona viloyati',40.5286,70.9425],['Marg’ilon','Farg’ona viloyati',40.4711,71.7247],['Samarqand','Samarqand viloyati',39.6542,66.9597],['Buxoro','Buxoro viloyati',39.7747,64.4286],['Navoiy','Navoiy viloyati',40.0844,65.3792],['Zarafshon','Navoiy viloyati',41.5667,64.2],['Jizzax','Jizzax viloyati',40.1158,67.8422],['Guliston','Sirdaryo viloyati',40.4897,68.7842],['Termiz','Surxondaryo viloyati',37.2242,67.2783],['Qarshi','Qashqadaryo viloyati',38.8606,65.7891],['Shahrisabz','Qashqadaryo viloyati',39.0578,66.8342],['Urganch','Xorazm viloyati',41.55,60.6333],['Xiva','Xorazm viloyati',41.3783,60.3639],['Nukus','Qoraqalpog’iston',42.4531,59.6103],['Chirchiq','Toshkent viloyati',41.4689,69.5822],['Angren','Toshkent viloyati',41.0167,70.1436],['Olmaliq','Toshkent viloyati',40.8447,69.5983],['Bekobod','Toshkent viloyati',40.2208,69.2697]];
+var LK='fapp_loc',LOC=null;try{LOC=JSON.parse(localStorage.getItem(LK))}catch(e){}
+function nm(s){return s.toLowerCase().replace(/['’ʻ`]/g,'')}
+function inUZ(a,o){return a>=37.1&&a<=45.7&&o>=55.9&&o<=73.2}
+function setLoc(l){LOC=l;try{localStorage.setItem(LK,JSON.stringify(l))}catch(e){}wx(l.lat,l.lon,l.name,false)}
+async function wx(lat,lon,name,fb){renderWx('load');
  try{var u='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=temperature_2m,apparent_temperature,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1';
- var p=await Promise.all([fetch(u).then(function(r){return r.json()}),fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+lat+'&longitude='+lon+'&localityLanguage=uz').then(function(r){return r.json()}).catch(function(){return null})]),j=p[0],g=p[1];
- if(!j.current)throw 0;
- W={city:fb?'Toshkent':(g&&(g.city||g.locality||g.principalSubdivision))||'Joriy joylashuv',t:j.current.temperature_2m,f:j.current.apparent_temperature,c:j.current.weather_code,d:j.current.is_day,time:j.current.time,hi:j.daily.temperature_2m_max[0],lo:j.daily.temperature_2m_min[0],fb:fb};
+ var j=await fetch(u).then(function(r){return r.json()});if(!j.current)throw 0;
+ W={city:name,t:j.current.temperature_2m,f:j.current.apparent_temperature,c:j.current.weather_code,d:j.current.is_day,time:j.current.time,hi:j.daily.temperature_2m_max[0],lo:j.daily.temperature_2m_min[0],fb:fb};
  try{localStorage.setItem(WK,JSON.stringify(W))}catch(e){}renderWx('ok')}
  catch(e){if(W){W.off=true;renderWx('ok')}else renderWx('err')}}
-function startWx(){var TL=[41.3111,69.2797];if(!navigator.geolocation){wx(TL[0],TL[1],true);return}
- navigator.geolocation.getCurrentPosition(function(p){wx(p.coords.latitude,p.coords.longitude,false)},function(){wx(TL[0],TL[1],true)},{timeout:8000,maximumAge:600000})}
+function revName(a,o){return fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+a+'&longitude='+o+'&localityLanguage=uz').then(function(r){return r.json()}).then(function(g){return g.city||g.locality||g.principalSubdivision||'Joriy joylashuv'}).catch(function(){return 'Joriy joylashuv'})}
+function gps(manual){var no=function(m){manual?toast(m):wx(41.3111,69.2797,'Toshkent',true)};
+ if(!navigator.geolocation){no('Joylashuvni aniqlab bo’lmadi');return}
+ navigator.geolocation.getCurrentPosition(function(p){var a=p.coords.latitude,o=p.coords.longitude;if(!inUZ(a,o)){no('Joylashuvingiz O’zbekiston hududida emas');return}revName(a,o).then(function(n){setLoc({name:n,lat:a,lon:o})})},function(){no('Joylashuvni aniqlab bo’lmadi. Ruxsatni tekshiring')},{timeout:8000,maximumAge:600000})}
+function startWx(){if(LOC)wx(LOC.lat,LOC.lon,LOC.name,false);else gps(false)}
+function openLoc(){openSheet('Shaharni tanlang (O’zbekiston)','Shahar yoki tuman…',function(v){v=nm(v);var l=v?[]:[['gps','Joylashuvim (GPS)','Aniqlash']];UZ.forEach(function(c,i){if(!v||nm(c[0]+' '+c[1]).indexOf(v)>=0)l.push([i,c[0],c[1]])});return l},function(k){if(k==='gps')gps(true);else{var c=UZ[k];setLoc({name:c[0],lat:c[2],lon:c[3]})}})}
+$('#wx').addEventListener('click',function(e){if(!e.target.closest('.rb'))openLoc()});
+$('#wx').addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target===this){e.preventDefault();openLoc()}});
 
 function card(icon,badge,title,sub){return '<article class="nc"><div class="th">'+(badge?'<span class="pl">'+badge+'</span>':'')+ic(icon)+'</div><div class="nt"><b>'+title+'</b><small>'+sub+'</small></div></article>'}
 function initHome(){if(inited)return;inited=true;
  $('#news').innerHTML=[0,1,2,3].map(function(){return card(SV[0][1],'Namuna','Yangilik sarlavhasi','Manba ulanmagan')}).join('');
  $('#deals').innerHTML=[0,1,2,3].map(function(){return card(SV[4][1],'Chegirma','Mahsulot nomi','Katalog ulanmagan')}).join('');
- $('#sv').innerHTML=SV.map(function(s,i){return '<button class="tl" type="button" data-i="'+i+'"><span class="tb">'+ic(s[1])+'</span><span>'+s[0]+'</span></button>'}).join('');
- $('#sv').addEventListener('click',function(e){var b=e.target.closest('.tl');if(b)toast(SV[b.dataset.i][0]+' — tez orada')});
  if(R)renderCur('ok');if(W)renderWx('ok');loadRates();startWx()}
 </script></body></html>
