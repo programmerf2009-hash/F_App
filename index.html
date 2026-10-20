@@ -99,13 +99,29 @@ input[aria-invalid=true]{border-color:var(--bad)}
 .ov{position:fixed;inset:0;background:rgba(0,5,20,.55);display:flex;align-items:flex-end;justify-content:center;z-index:5}
 .sp{width:100%;max-width:520px;max-height:82vh;display:flex;flex-direction:column;gap:12px;padding:16px;background:var(--bg);border:1px solid var(--line);border-radius:24px 24px 0 0;animation:in .25s ease}
 .sph{display:flex;align-items:center;justify-content:space-between}.sph h3{margin:0 0 0 4px;font-size:18px;font-weight:600}
-#home input{height:50px;border-radius:14px;padding:0 16px;background:var(--cb);border:1px solid var(--line);color:var(--tx);backdrop-filter:none;-webkit-backdrop-filter:none}
+
 #home input::placeholder{color:var(--mu)}
 .shl{overflow:auto;display:grid;gap:2px}
 .shl button{display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;background:none;border:0;border-radius:12px;padding:12px;color:var(--tx);font:500 15px inherit;font-family:inherit;cursor:pointer}.shl button:hover{background:var(--line)}.shl small{color:var(--mu);font-weight:400;font-size:13px}
 @media (min-width:640px){.sv{grid-template-columns:repeat(8,1fr)}.top{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.ov{align-items:center}.sp{border-radius:24px}}
 @media (min-width:900px){#home{display:grid;grid-template-columns:92px 1fr;grid-template-rows:auto 1fr}.hd{grid-column:1/-1;padding-left:28px;padding-right:28px}.nb{grid-column:1;grid-row:2;grid-template-columns:none;grid-auto-rows:64px;align-content:start;gap:6px;padding:16px 8px;border-top:0;border-right:1px solid var(--line)}.ct{grid-column:2;grid-row:2;padding:26px 32px}.car{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));overflow:visible}.nc{flex:none}#toast{bottom:28px}.tb{width:60px;height:60px}}
-.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--tb);border:1px solid var(--line);color:var(--mu)}.hd .ib{margin-left:auto;margin-right:6px}.wx{cursor:pointer}</style></head><body>
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--tb);border:1px solid var(--line);color:var(--mu)}.hd .ib{margin-left:auto;margin-right:6px}.wx{cursor:pointer}#home input[type=text],#home input[type=password],#home input[type=number]{height:50px;border-radius:14px;padding:0 16px;background:var(--cb);border:1px solid var(--line);color:var(--tx);backdrop-filter:none;-webkit-backdrop-filter:none}
+#home textarea{width:100%;border-radius:14px;padding:12px 16px;background:var(--cb);border:1px solid var(--line);color:var(--tx);font:16px inherit;font-family:inherit;resize:vertical;outline:0}
+#home label.t,#home .t{color:var(--mu)}#home .msg{color:var(--mu)}#home .msg.bad{color:#e5484d}#home .msg.ok{color:#1f9d55}
+#home .gen span{height:46px;background:var(--cb);border-color:var(--line);color:var(--mu)}#home .gen input:checked+span{background:var(--ac);border-color:var(--ac);color:#fff}.gen.g3{grid-template-columns:repeat(3,1fr)}
+.sg{max-width:640px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.sg>*{min-width:0}.pt{margin:0 0 4px;font-size:26px;font-weight:600}
+.sc{padding:18px}.sct{margin:0 0 14px;font-size:17px;font-weight:600}
+.sav{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:var(--tb);border:1px solid var(--line);color:var(--mu);overflow:hidden;flex:none}.sav .i{width:40px;height:40px}
+.sav img,.av img{width:100%;height:100%;object-fit:cover;display:block}.av{overflow:hidden}
+.prw{display:flex;align-items:center;gap:16px;margin-bottom:8px}.pb{display:flex;flex-wrap:wrap;gap:8px}
+.sbtn{height:46px;padding:0 20px;border-radius:14px;border:1px solid var(--ac);background:var(--ac);color:#fff;font:600 15px inherit;font-family:inherit;cursor:pointer}.sbtn.gh{background:none;color:var(--ac)}.sbtn.dg{background:none;color:#e5484d;border-color:#e5484d}.sbtn:disabled{opacity:.6;cursor:wait}
+.nk{padding:12px 16px;border-radius:14px;border:1px dashed var(--line);color:var(--mu)}
+.swr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);position:relative;cursor:pointer}.sct+.swr{border-top:0;padding-top:0}.swr small{display:block;color:var(--mu);font-size:12px;margin-top:2px}
+.swr input{position:absolute;opacity:0;width:46px;height:26px;right:0}.swr i{width:46px;height:26px;border-radius:13px;background:var(--line);position:relative;flex:none;transition:.2s}.swr i::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:.2s}.swr input:checked+i{background:var(--ac)}.swr input:checked+i::after{transform:translateX(20px)}.swr input:focus-visible+i{outline:2px solid var(--ac);outline-offset:2px}
+.kv{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line)}.kv b{font-weight:500}.kv small{display:block;color:var(--mu);font-size:12px;margin-top:2px}
+.ab{margin:0;font-size:12.5px;line-height:1.7;color:var(--mu)}.ab a{color:inherit}
+@media (min-width:900px){.sg{max-width:1000px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.pt{grid-column:1/-1}}
+</style></head><body>
 <div class="wave" style="top:24%" aria-hidden="true"></div><div class="wave" style="top:64%" aria-hidden="true"></div>
 <canvas id="s" aria-hidden="true"></canvas>
 
@@ -144,17 +160,65 @@ input[aria-invalid=true]{border-color:var(--bad)}
 
 <div id="home" hidden>
 <header class="hd"><div class="hb"><img class="mark" alt="" src=""><span>F App</span></div><button class="ib" id="sb" type="button" aria-label="Qidirish"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button><span class="av" role="img" aria-label="Profil rasmi uchun joy"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.4 7-5.4s6.2 1.8 7 5.4"/></svg></span></header>
-<main class="ct"><div class="wrap">
+<main class="ct" id="pg-home"><div class="wrap">
 <div class="top"><section class="card cur" id="cur" aria-label="Valyuta kursi"></section><section class="wx" id="wx" role="button" tabindex="0" aria-label="Ob-havo. Shaharni o’zgartirish uchun bosing"></section></div>
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>So’nggi yangiliklar</h2><p class="sn">Yangiliklar manbasi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="news"></div></section>
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Do’kon chegirmalari</h2><p class="sn">Mahsulotlar katalogi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="deals"></div></section>
 </div></main>
+<main class="ct" id="pg-set" hidden><div class="sg">
+<h1 class="pt">Sozlamalar</h1>
+
+<section class="card sc" id="set-guest" hidden><h2 class="sct">Akkaunt</h2><p class="sn">Mehmon rejimida profil sozlamalari mavjud emas. Profil, bio va rasm uchun akkaunt yarating.</p><button class="sbtn" id="sgl" type="button">Kirish yoki ro’yxatdan o’tish</button></section>
+
+<section class="card sc" id="set-acc"><h2 class="sct">Akkaunt</h2>
+<div class="prw"><span class="sav" id="sav"></span><div class="pb"><button class="sbtn" id="sph" type="button">Rasm tanlash</button><button class="sbtn gh" id="spr" type="button">Olib tashlash</button><input id="spf" type="file" accept="image/*" hidden></div></div>
+<div class="msg" id="spm" aria-live="polite"></div>
+<form id="fa" novalidate>
+<div class="row"><div class="f"><label class="t" for="sfn">Ism</label><input id="sfn" type="text" maxlength="30" autocomplete="given-name"><div class="msg" id="sfnm"></div></div>
+<div class="f"><label class="t" for="sln">Familya</label><input id="sln" type="text" maxlength="30" autocomplete="family-name"><div class="msg" id="slnm"></div></div></div>
+<div class="row"><div class="f"><label class="t" for="sag">Yosh</label><input id="sag" type="number" inputmode="numeric" min="13" max="120"><div class="msg" id="sagm"></div></div>
+<div class="f"><span class="t" id="sgl2" style="display:block;font-size:13px;margin:0 0 6px 4px">Jins</span><div class="gen" role="radiogroup" aria-labelledby="sgl2"><label><input type="radio" name="sg" value="Erkak"><span>Erkak</span></label><label><input type="radio" name="sg" value="Ayol"><span>Ayol</span></label></div><div class="msg" id="sgm"></div></div></div>
+<div class="f"><label class="t" for="sbio">Bio</label><textarea id="sbio" maxlength="150" rows="3" placeholder="O’zingiz haqingizda qisqacha yozing"></textarea><div class="msg" id="sbc">0 / 150</div></div>
+<div class="f"><span class="t" style="display:block;font-size:13px;margin:0 0 6px 4px">Nickname</span><div class="nk" id="snk"></div><div class="msg">Nickname o’zgartirilmaydi.</div></div>
+<button class="sbtn" id="sbs" type="submit">Saqlash</button><div class="msg" id="sfm" aria-live="polite"></div>
+</form></section>
+
+<section class="card sc" id="set-pw"><h2 class="sct">Parolni o’zgartirish</h2>
+<form id="fp" novalidate>
+<div class="f"><label class="t" for="sop">Eski parol</label><input id="sop" type="password" autocomplete="current-password"></div>
+<div class="f"><label class="t" for="snp">Yangi parol (kamida 8 ta belgi)</label><input id="snp" type="password" autocomplete="new-password"></div>
+<label class="swr" style="border:0;padding:0 0 12px"><span>Parolni ko’rsatish</span><input type="checkbox" id="spw-s"><i></i></label>
+<button class="sbtn" id="spb" type="submit">Parolni almashtirish</button><div class="msg" id="spwm" aria-live="polite"></div>
+</form></section>
+
+<section class="card sc"><h2 class="sct">Ko’rinish</h2>
+<span class="t" id="thl" style="display:block;font-size:13px;margin:0 0 6px 4px">Mavzu</span>
+<div class="gen g3" role="radiogroup" aria-labelledby="thl"><label><input type="radio" name="th" value="auto"><span>Avtomatik</span></label><label><input type="radio" name="th" value="dark"><span>Qorong’i</span></label><label><input type="radio" name="th" value="light"><span>Oltin</span></label></div>
+<div class="msg">Avtomatik rejim qurilmangiz sozlamasiga ergashadi.</div></section>
+
+<section class="card sc"><h2 class="sct">Bosh sahifa</h2>
+<label class="swr"><span>Valyuta kurslari</span><input type="checkbox" data-h="cur"><i></i></label>
+<label class="swr"><span>Ob-havo</span><input type="checkbox" data-h="wx"><i></i></label>
+<label class="swr"><span>So’nggi yangiliklar</span><input type="checkbox" data-h="news"><i></i></label>
+<label class="swr"><span>Do’kon chegirmalari</span><input type="checkbox" data-h="deals"><i></i></label>
+<div class="kv"><div><b>Ob-havo shahri</b><small id="scity">—</small></div><button class="sbtn gh" id="scb" type="button">O’zgartirish</button></div>
+<label class="swr"><span>Joylashuvni avtomatik aniqlash<small>Shahar tanlanmagan bo’lsa ishlatiladi</small></span><input type="checkbox" id="sgps"><i></i></label>
+<div class="kv"><div><b>Harorat birligi</b></div><div class="gen" style="width:140px" role="radiogroup" aria-label="Harorat birligi"><label><input type="radio" name="un" value="C"><span>°C</span></label><label><input type="radio" name="un" value="F"><span>°F</span></label></div></div>
+<div class="kv"><div><b>Valyutalar</b><small>USD, EUR, UZS holatiga qaytarish</small></div><button class="sbtn gh" id="srcur" type="button">Qaytarish</button></div></section>
+
+<section class="card sc"><h2 class="sct">Ma’lumotlar</h2>
+<div class="kv" style="border:0;padding-top:0"><div><b>Keshni tozalash</b><small>Saqlangan kurs va ob-havo o’chadi, sozlamalaringiz qoladi</small></div><button class="sbtn gh" id="sclr" type="button">Tozalash</button></div></section>
+
+<section class="card sc"><h2 class="sct">Ilova haqida</h2>
+<p class="ab">F App, demo versiya. Ma’lumotlar shu qurilmada saqlanadi.<br>Valyuta kurslari: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates By Exchange Rate API</a>.<br>Ob-havo: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo.com</a>.</p>
+<button class="sbtn dg" id="slo" type="button" style="margin-top:12px">Chiqish</button></section>
+</div></main>
 <nav class="nb" aria-label="Asosiy menyu">
-<button type="button" class="on" aria-current="page"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>Bosh sahifa</button>
+<button type="button" class="on" id="nh" aria-current="page"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>Bosh sahifa</button>
 <button type="button" data-t="Bu bo’lim keyinroq qo’shiladi" aria-label="Bo’sh bo’lim"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3 3"/></svg></button>
 <button type="button" data-t="Bu bo’lim keyinroq qo’shiladi" aria-label="Bo’sh bo’lim"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3 3"/></svg></button>
 <button type="button" data-t="Profil keyinroq qo’shiladi"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Profil</button>
-<button type="button" data-t="Sozlamalar keyinroq qo’shiladi"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Sozlamalar</button>
+<button type="button" id="ns"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Sozlamalar</button>
 </nav>
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="sheet" class="ov" hidden><div class="sp" role="dialog" aria-modal="true" aria-labelledby="sht"><div class="sph"><h3 id="sht"></h3><button class="ib" id="shx" type="button" aria-label="Yopish"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><input id="shq" type="text" autocomplete="off" aria-label="Qidirish"><div class="shl" id="shl"></div></div></div>
@@ -190,7 +254,7 @@ var api={
 
 function show(id){['splash','auth','home'].forEach(function(i){$('#'+i).hidden=i!==id})}
 function view(reg){$('#v-login').hidden=reg;$('#v-reg').hidden=!reg;$('#auth').scrollTop=0}
-function enter(n,guest){show('home');initHome()}
+function enter(n,guest){CU=guest?null:n;show('home');initHome();refreshSettings();showPage('home')}
 function say(el,t,k){el.textContent=t;el.className='msg'+(k?' '+k:'')}
 function bad(i,f){i.setAttribute('aria-invalid',f?'true':'false')}
 $('#go-reg').onclick=function(){view(true)};$('#go-login').onclick=function(){view(false)};
@@ -284,10 +348,10 @@ try{W=JSON.parse(localStorage.getItem(WK))}catch(e){}
 function wcode(c){return c<=1?['clear',c?'Asosan ochiq':'Ochiq']:c===2?['part','Qisman bulutli']:c===3?['cloud','Bulutli']:c<=48?['fog','Tuman']:c<=57?['rain','Yengil yomg’ir']:c<=67?['rain','Yomg’ir']:c<=77?['snow','Qor']:c<=82?['rain','Jala']:c<=86?['snow','Qor']:['storm','Momaqaldiroq']}
 function wicon(k,day){var s=day?WI.sun:WI.moon,C=WI.cloud;return k==='clear'?s:k==='part'?'<g transform="translate(-1 -2) scale(.7)">'+s+'</g><g transform="translate(4 3) scale(.8)">'+C+'</g>':k==='fog'?'<path d="M4 9h16M3 13h18M5 17h14"/>':k==='rain'?C+'<path d="M8 21l1-2M12 21l1-2M16 21l1-2"/>':k==='snow'?C+'<path d="M8 21h.01M12 21h.01M16 21h.01" stroke-width="2.4"/>':k==='storm'?C+'<path d="M12 18.5l-1.5 2.5h3L12 23.5"/>':C}
 function wday(t){try{var d=new Date(t),n=d.toLocaleDateString('uz',{weekday:'long'});return n.charAt(0).toUpperCase()+n.slice(1)+' · '+t.slice(11,16)}catch(e){return t.slice(11,16)}}
-function renderWx(st){var el=$('#wx');
+function renderWx(st){var el=$('#wx');setCity();
  if(st==='load'&&!W){el.innerHTML='<div style="flex:1"><div class="sk" style="height:22px;width:45%"></div><div class="sk" style="height:56px;width:35%;margin-top:14px"></div><div class="sk" style="height:14px;width:60%;margin-top:16px"></div></div>';return}
  if(st==='err'&&!W){el.innerHTML='<div><h2>Ob-havo</h2><p class="cd">Ob-havoni yuklab bo’lmadi. Internetni tekshiring.</p><button class="rb" type="button" id="wr">Qayta urinish</button></div>';$('#wr').onclick=startWx;return}
- var w=wcode(W.c),n=function(x){return Math.round(x)+'°'};
+ var w=wcode(W.c),n=function(x){return F()?Math.round(x*9/5+32)+'°F':Math.round(x)+'°'};
  el.innerHTML='<div><h2>'+W.city+'</h2><div class="tm">'+n(W.t)+'</div><div class="cd">'+w[1]+' · '+wday(W.time)+'</div><div class="sb">His qilinadi '+n(W.f)+' · '+n(W.hi)+' / '+n(W.lo)+'</div>'+'<div class="fb">'+(W.fb?'Joylashuv aniqlanmadi. Shaharni tanlash uchun bosing.':'Shaharni o’zgartirish uchun bosing')+'</div>'+(W.off?'<div class="fb">Oflayn: oxirgi saqlangan ma’lumot.</div>':'')+'</div><svg class="wi" viewBox="0 0 24 24" aria-hidden="true">'+wicon(w[0],W.d)+'</svg>'}
 var UZ=[['Toshkent','Toshkent shahri',41.3111,69.2797],['Andijon','Andijon viloyati',40.7821,72.3442],['Shahrixon','Andijon viloyati',40.7133,72.0550],['Asaka','Andijon viloyati',40.6419,72.2386],['Xonobod','Andijon viloyati',40.8,73.0],['Namangan','Namangan viloyati',40.9983,71.6726],['Farg’ona','Farg’ona viloyati',40.3842,71.7843],['Qo’qon','Farg’ona viloyati',40.5286,70.9425],['Marg’ilon','Farg’ona viloyati',40.4711,71.7247],['Samarqand','Samarqand viloyati',39.6542,66.9597],['Buxoro','Buxoro viloyati',39.7747,64.4286],['Navoiy','Navoiy viloyati',40.0844,65.3792],['Zarafshon','Navoiy viloyati',41.5667,64.2],['Jizzax','Jizzax viloyati',40.1158,67.8422],['Guliston','Sirdaryo viloyati',40.4897,68.7842],['Termiz','Surxondaryo viloyati',37.2242,67.2783],['Qarshi','Qashqadaryo viloyati',38.8606,65.7891],['Shahrisabz','Qashqadaryo viloyati',39.0578,66.8342],['Urganch','Xorazm viloyati',41.55,60.6333],['Xiva','Xorazm viloyati',41.3783,60.3639],['Nukus','Qoraqalpog’iston',42.4531,59.6103],['Chirchiq','Toshkent viloyati',41.4689,69.5822],['Angren','Toshkent viloyati',41.0167,70.1436],['Olmaliq','Toshkent viloyati',40.8447,69.5983],['Bekobod','Toshkent viloyati',40.2208,69.2697]];
 var LK='fapp_loc',LOC=null;try{LOC=JSON.parse(localStorage.getItem(LK))}catch(e){}
@@ -304,7 +368,7 @@ function revName(a,o){return fetch('https://api.bigdatacloud.net/data/reverse-ge
 function gps(manual){var no=function(m){manual?toast(m):wx(41.3111,69.2797,'Toshkent',true)};
  if(!navigator.geolocation){no('Joylashuvni aniqlab bo’lmadi');return}
  navigator.geolocation.getCurrentPosition(function(p){var a=p.coords.latitude,o=p.coords.longitude;if(!inUZ(a,o)){no('Joylashuvingiz O’zbekiston hududida emas');return}revName(a,o).then(function(n){setLoc({name:n,lat:a,lon:o})})},function(){no('Joylashuvni aniqlab bo’lmadi. Ruxsatni tekshiring')},{timeout:8000,maximumAge:600000})}
-function startWx(){if(LOC)wx(LOC.lat,LOC.lon,LOC.name,false);else gps(false)}
+function startWx(){if(LOC)wx(LOC.lat,LOC.lon,LOC.name,false);else if(getp('fapp_gps','1')!=='0')gps(false);else wx(41.3111,69.2797,'Toshkent',true)}
 function openLoc(){openSheet('Shaharni tanlang (O’zbekiston)','Shahar yoki tuman…',function(v){v=nm(v);var l=v?[]:[['gps','Joylashuvim (GPS)','Aniqlash']];UZ.forEach(function(c,i){if(!v||nm(c[0]+' '+c[1]).indexOf(v)>=0)l.push([i,c[0],c[1]])});return l},function(k){if(k==='gps')gps(true);else{var c=UZ[k];setLoc({name:c[0],lat:c[2],lon:c[3]})}})}
 $('#wx').addEventListener('click',function(e){if(!e.target.closest('.rb'))openLoc()});
 $('#wx').addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target===this){e.preventDefault();openLoc()}});
@@ -313,5 +377,64 @@ function card(icon,badge,title,sub){return '<article class="nc"><div class="th">
 function initHome(){if(inited)return;inited=true;
  $('#news').innerHTML=[0,1,2,3].map(function(){return card(SV[0][1],'Namuna','Yangilik sarlavhasi','Manba ulanmagan')}).join('');
  $('#deals').innerHTML=[0,1,2,3].map(function(){return card(SV[4][1],'Chegirma','Mahsulot nomi','Katalog ulanmagan')}).join('');
- if(R)renderCur('ok');if(W)renderWx('ok');loadRates();startWx()}
+ applyHome();if(R)renderCur('ok');if(W)renderWx('ok');loadRates();startWx()}
+/* ================= SOZLAMALAR ================= */
+var CU=null,HK='fapp_home',HP={cur:1,wx:1,news:1,deals:1},UK='fapp_unit',UNIT='C',GK='fapp_gps',AVD='<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.4 7-5.4s6.2 1.8 7 5.4"/></svg>';
+try{Object.assign(HP,JSON.parse(localStorage.getItem(HK)))}catch(e){}
+try{UNIT=localStorage.getItem(UK)==='F'?'F':'C'}catch(e){}
+function F(){return UNIT==='F'}
+function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function getp(k,d){try{var v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}}
+api.updateProfile=function(n,p){var u=rd();if(!u[n])throw new Error('none');u[n].profile=Object.assign({},u[n].profile,p);localStorage.setItem(KU,JSON.stringify(u))};
+api.changePassword=async function(n,o,nw){await wait(500);var u=rd(),r=u[n];if(!r||await kdf(o,unb64(r.salt))!==r.hash)throw new Error('bad');var s=crypto.getRandomValues(new Uint8Array(16));r.salt=b64(s);r.hash=await kdf(nw,s);localStorage.setItem(KU,JSON.stringify(u))};
+function setCity(){var e=$('#scity');if(e)e.textContent=W?W.city:'Tanlanmagan'}
+function drawAvatar(){var p=CU&&api.profile(CU),h=p&&p.photo?'<img alt="" src="'+p.photo+'">':AVD;$('.av').innerHTML=h;$('#sav').innerHTML=h}
+function applyHome(){$('#cur').hidden=!HP.cur;$('#wx').hidden=!HP.wx;$('#news').parentNode.hidden=!HP.news;$('#deals').parentNode.hidden=!HP.deals;document.querySelector('.top').hidden=!HP.cur&&!HP.wx}
+function showPage(p){$('#pg-home').hidden=p!=='home';$('#pg-set').hidden=p!=='set';$('#nh').classList.toggle('on',p==='home');$('#ns').classList.toggle('on',p==='set');$('#nh').removeAttribute('aria-current');$('#ns').removeAttribute('aria-current');$(p==='home'?'#nh':'#ns').setAttribute('aria-current','page');$('#pg-'+p).scrollTop=0}
+$('#nh').onclick=function(){showPage('home')};$('#ns').onclick=function(){showPage('set')};
+function refreshSettings(){var acc=!!CU;$('#set-acc').hidden=!acc;$('#set-pw').hidden=!acc;$('#set-guest').hidden=acc;
+ if(acc){var p=api.profile(CU)||{};$('#sfn').value=p.first||'';$('#sln').value=p.last||'';$('#sag').value=p.age||'';document.querySelectorAll('input[name=sg]').forEach(function(r){r.checked=r.value===p.gender});$('#sbio').value=p.bio||'';$('#sbc').textContent=$('#sbio').value.length+' / 150';$('#snk').textContent='@'+CU}
+ var th=getp('fapp_theme','auto');document.querySelectorAll('input[name=th]').forEach(function(r){r.checked=r.value===th});
+ document.querySelectorAll('input[name=un]').forEach(function(r){r.checked=r.value===UNIT});
+ document.querySelectorAll('[data-h]').forEach(function(c){c.checked=!!HP[c.dataset.h]});
+ $('#sgps').checked=getp(GK,'1')!=='0';drawAvatar();setCity();applyHome()}
+
+/* Akkaunt */
+$('#sgl').onclick=function(){api.logout();CU=null;view(false);show('auth')};
+$('#sbio').addEventListener('input',function(){$('#sbc').textContent=this.value.length+' / 150'});
+function resizeImg(file){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var s=Math.min(im.width,im.height),c=document.createElement('canvas');c.width=c.height=256;c.getContext('2d').drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,256,256);res(c.toDataURL('image/jpeg',.85))};im.onerror=rej;im.src=r.result};r.onerror=rej;r.readAsDataURL(file)})}
+$('#sph').onclick=function(){$('#spf').click()};
+$('#spf').addEventListener('change',async function(){var f=this.files[0];this.value='';var m=$('#spm');if(!f)return;
+ if(!/^image\//.test(f.type)){say(m,'Faqat rasm faylini tanlang','bad');return}
+ if(f.size>10*1024*1024){say(m,'Rasm hajmi 10 MB dan oshmasin','bad');return}
+ try{var d=await resizeImg(f);api.updateProfile(CU,{photo:d});drawAvatar();say(m,'Rasm yangilandi','ok')}catch(e){say(m,'Rasmni saqlab bo’lmadi. Boshqa rasm tanlang','bad')}});
+$('#spr').onclick=function(){var p=api.profile(CU)||{};if(!p.photo){say($('#spm'),'Rasm qo’yilmagan');return}try{api.updateProfile(CU,{photo:''});drawAvatar();say($('#spm'),'Rasm olib tashlandi','ok')}catch(e){}};
+$('#fa').addEventListener('submit',function(e){e.preventDefault();
+ var f=$('#sfn').value.trim(),l=$('#sln').value.trim(),a=Number($('#sag').value),g=(document.querySelector('input[name=sg]:checked')||{}).value,b=$('#sbio').value.trim(),first=null;
+ function err(i,m,t){bad(i,true);say($(m),t,'bad');first=first||i}
+ ['#sfn','#sln','#sag'].forEach(function(i){bad($(i),false)});['#sfnm','#slnm','#sagm','#sgm','#sfm'].forEach(function(i){say($(i),'')});
+ if(!NAME.test(f))err($('#sfn'),'#sfnm','Ismni kiriting');
+ if(!NAME.test(l))err($('#sln'),'#slnm','Familyani kiriting');
+ if(!Number.isInteger(a)||a<13||a>120)err($('#sag'),'#sagm','Yosh 13 dan 120 gacha');
+ if(!g){say($('#sgm'),'Jinsni tanlang','bad');first=first||document.querySelector('input[name=sg]')}
+ if(first){first.focus();return}
+ try{api.updateProfile(CU,{first:f,last:l,age:a,gender:g,bio:b});say($('#sfm'),'✓ Saqlandi','ok');toast('Profil saqlandi')}catch(er){say($('#sfm'),'Saqlab bo’lmadi. Qayta urinib ko’ring','bad')}});
+$('#spw-s').onchange=function(){$('#sop').type=$('#snp').type=this.checked?'text':'password'};
+$('#fp').addEventListener('submit',async function(e){e.preventDefault();var o=$('#sop').value,n=$('#snp').value,m=$('#spwm'),b=$('#spb');bad($('#sop'),false);bad($('#snp'),false);
+ if(!o){bad($('#sop'),true);say(m,'Eski parolni kiriting','bad');return}
+ if(n.length<8){bad($('#snp'),true);say(m,'Yangi parol kamida 8 ta belgi bo’lsin','bad');return}
+ if(n===o){bad($('#snp'),true);say(m,'Yangi parol eskisidan farq qilsin','bad');return}
+ b.disabled=true;b.textContent='Tekshirilmoqda…';
+ try{await api.changePassword(CU,o,n);this.reset();$('#sop').type=$('#snp').type='password';say(m,'✓ Parol almashtirildi','ok');toast('Parol almashtirildi')}catch(er){bad($('#sop'),true);say(m,'Eski parol noto’g’ri','bad')}
+ b.disabled=false;b.textContent='Parolni almashtirish'});
+
+/* Ko'rinish va bosh sahifa */
+document.querySelectorAll('input[name=th]').forEach(function(r){r.onchange=function(){store('fapp_theme',r.value);theme()}});
+document.querySelectorAll('[data-h]').forEach(function(c){c.onchange=function(){HP[c.dataset.h]=c.checked?1:0;store(HK,JSON.stringify(HP));applyHome()}});
+document.querySelectorAll('input[name=un]').forEach(function(r){r.onchange=function(){UNIT=r.value;store(UK,UNIT);if(W)renderWx('ok')}});
+$('#sgps').onchange=function(){store(GK,this.checked?'1':'0');if(this.checked&&!LOC)startWx()};
+$('#scb').onclick=openLoc;
+$('#srcur').onclick=function(){CUR=['USD','EUR','UZS'];store(CK,JSON.stringify(CUR));if(R)renderCur('ok');toast('Valyutalar qaytarildi')};
+$('#sclr').onclick=function(){try{localStorage.removeItem(RK);localStorage.removeItem(WK)}catch(e){}R=null;W=null;renderCur('load');renderWx('load');loadRates();startWx();toast('Kesh tozalandi')};
+$('#slo').onclick=function(){api.logout();CU=null;showPage('home');view(false);show('auth')};
 </script></body></html>
