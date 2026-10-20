@@ -121,6 +121,32 @@ input[aria-invalid=true]{border-color:var(--bad)}
 .kv{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line)}.kv b{font-weight:500}.kv small{display:block;color:var(--mu);font-size:12px;margin-top:2px}
 .ab{margin:0;font-size:12.5px;line-height:1.7;color:var(--mu)}.ab a{color:inherit}
 @media (min-width:900px){.sg{max-width:1000px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.pt{grid-column:1/-1}}
+#toast{z-index:9}.nb button{position:relative}
+.bd{position:absolute;top:3px;left:calc(50% + 6px);min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#e5484d;color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center}
+.pro{max-width:720px;margin:0 auto;display:grid;gap:16px}#pr-main{display:grid;gap:16px}
+.pbk{justify-self:start;display:flex;align-items:center;gap:6px;background:none;border:0;color:var(--ac);font:500 15px inherit;font-family:inherit;cursor:pointer;padding:6px 4px}
+.phd{display:flex;align-items:center;gap:18px}
+.pav{width:88px;height:88px;border-radius:50%;overflow:hidden;flex:none;display:grid;place-items:center;background:var(--tb);border:1px solid var(--line);color:var(--mu)}
+.pav img,.pa img{width:100%;height:100%;object-fit:cover;display:block}#home .pav .i{width:42px;height:42px}
+.pcn{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.pcn>*{background:none;border:0;color:var(--tx);font-family:inherit;padding:8px 4px;border-radius:14px}.pcn button{cursor:pointer}.pcn button:hover{background:var(--line)}
+.pcn b{display:block;font-size:22px;font-weight:600}.pcn span{font-size:12.5px;color:var(--mu)}
+.pnm2{font-size:17px;font-weight:600}.pnk{color:var(--mu);font-size:14px}.pbio{margin:6px 0 0;font-size:14.5px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+.pact{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sb2.fill{background:var(--ac);border-color:var(--ac);color:#fff}.sb2 .i{width:18px;height:18px;vertical-align:-4px;margin-right:4px}
+.psh2{display:flex;align-items:center;justify-content:space-between}.psh2 .st{margin:0}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.pgrid button{position:relative;aspect-ratio:1;border:0;padding:0;background:var(--tb);overflow:hidden;cursor:pointer;border-radius:4px}
+.pgrid img,.pgrid video{width:100%;height:100%;object-fit:cover;display:block}
+#home .pgrid .vb{position:absolute;top:6px;right:6px;width:20px;height:20px;fill:#fff;stroke:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
+.lock{display:grid;justify-items:center;gap:6px;text-align:center;padding:34px 18px;color:var(--mu);border:1px dashed var(--line);border-radius:18px}#home .lock .i{width:38px;height:38px}.lock b{color:var(--tx);font-weight:600}
+.pshb{overflow:auto;display:grid;gap:12px;align-content:start}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:8px}.pac{display:flex;gap:6px;flex:none;flex-wrap:wrap;justify-content:flex-end}
+.pgo{display:flex;align-items:center;gap:12px;min-width:0;flex:1;background:none;border:0;color:var(--tx);text-align:left;cursor:pointer;font-family:inherit;padding:6px;border-radius:12px}.pgo:hover{background:var(--line)}
+.pa{width:46px;height:46px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--tb);color:var(--mu);flex:none}
+.pt2{display:grid;min-width:0}.pt2 b{font-size:15px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pt2 small,.tag{color:var(--mu);font-size:13px}
+.pcp img,.pcp video{width:100%;max-height:60vh;object-fit:contain;border-radius:14px;background:#000;display:block}
+#home .pshb textarea{width:100%;border-radius:14px;padding:12px 16px;background:var(--cb);border:1px solid var(--line);color:var(--tx);font:16px inherit;font-family:inherit;resize:vertical;outline:0}
+.sb2{height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--ac);background:none;color:var(--ac);font:500 14px inherit;font-family:inherit;cursor:pointer}.sb2:hover{background:var(--line)}.sb2.ghost{border-color:var(--line);color:var(--mu)}.sb2.dg{border-color:#e06666;color:#e06666}.sb2.fill:hover{background:var(--ac);filter:brightness(1.1)}.sb2:disabled{opacity:.5;cursor:default}
 </style></head><body>
 <div class="wave" style="top:24%" aria-hidden="true"></div><div class="wave" style="top:64%" aria-hidden="true"></div>
 <canvas id="s" aria-hidden="true"></canvas>
@@ -165,6 +191,7 @@ input[aria-invalid=true]{border-color:var(--bad)}
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>So’nggi yangiliklar</h2><p class="sn">Yangiliklar manbasi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="news"></div></section>
 <section><h2 class="st"><svg class="i" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Do’kon chegirmalari</h2><p class="sn">Mahsulotlar katalogi hali ulanmagan. Quyida namuna joylar turibdi.</p><div class="car" id="deals"></div></section>
 </div></main>
+<main class="ct" id="pg-pro" hidden><div class="pro"><div id="pr-guest" class="card sc" hidden><h2 class="sct">Profil</h2><p class="sn">Mehmon rejimida profil mavjud emas. Do’stlar va postlar uchun akkaunt yarating.</p><button class="sbtn" type="button" data-act="gsign">Ro’yxatdan o’tish</button></div><div id="pr-main"></div></div></main>
 <main class="ct" id="pg-set" hidden><div class="sg">
 <h1 class="pt">Sozlamalar</h1>
 
@@ -217,9 +244,10 @@ input[aria-invalid=true]{border-color:var(--bad)}
 <button type="button" class="on" id="nh" aria-current="page"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>Bosh sahifa</button>
 <button type="button" data-t="Bu bo’lim keyinroq qo’shiladi" aria-label="Bo’sh bo’lim"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3 3"/></svg></button>
 <button type="button" data-t="Bu bo’lim keyinroq qo’shiladi" aria-label="Bo’sh bo’lim"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3 3"/></svg></button>
-<button type="button" data-t="Profil keyinroq qo’shiladi"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Profil</button>
+<button type="button" id="np"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Profil<span class="bd" id="pbd" hidden></span></button>
 <button type="button" id="ns"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Sozlamalar</button>
 </nav>
+<div id="psh" class="ov" hidden><div class="sp" role="dialog" aria-modal="true" aria-labelledby="psht"><div class="sph"><h3 id="psht"></h3><button class="ib" id="pshx" type="button" aria-label="Yopish"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div id="pshb" class="pshb"></div></div></div>
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="sheet" class="ov" hidden><div class="sp" role="dialog" aria-modal="true" aria-labelledby="sht"><div class="sph"><h3 id="sht"></h3><button class="ib" id="shx" type="button" aria-label="Yopish"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><input id="shq" type="text" autocomplete="off" aria-label="Qidirish"><div class="shl" id="shl"></div></div></div>
 </div>
@@ -254,7 +282,7 @@ var api={
 
 function show(id){['splash','auth','home'].forEach(function(i){$('#'+i).hidden=i!==id})}
 function view(reg){$('#v-login').hidden=reg;$('#v-reg').hidden=!reg;$('#auth').scrollTop=0}
-function enter(n,guest){CU=guest?null:n;show('home');initHome();refreshSettings();showPage('home')}
+function enter(n,guest){CU=guest?null:n;show('home');initHome();refreshSettings();showPage('home');pReset();updBadge()}
 function say(el,t,k){el.textContent=t;el.className='msg'+(k?' '+k:'')}
 function bad(i,f){i.setAttribute('aria-invalid',f?'true':'false')}
 $('#go-reg').onclick=function(){view(true)};$('#go-login').onclick=function(){view(false)};
@@ -390,8 +418,9 @@ api.changePassword=async function(n,o,nw){await wait(500);var u=rd(),r=u[n];if(!
 function setCity(){var e=$('#scity');if(e)e.textContent=W?W.city:'Tanlanmagan'}
 function drawAvatar(){var p=CU&&api.profile(CU),h=p&&p.photo?'<img alt="" src="'+p.photo+'">':AVD;$('.av').innerHTML=h;$('#sav').innerHTML=h}
 function applyHome(){$('#cur').hidden=!HP.cur;$('#wx').hidden=!HP.wx;$('#news').parentNode.hidden=!HP.news;$('#deals').parentNode.hidden=!HP.deals;document.querySelector('.top').hidden=!HP.cur&&!HP.wx}
-function showPage(p){$('#pg-home').hidden=p!=='home';$('#pg-set').hidden=p!=='set';$('#nh').classList.toggle('on',p==='home');$('#ns').classList.toggle('on',p==='set');$('#nh').removeAttribute('aria-current');$('#ns').removeAttribute('aria-current');$(p==='home'?'#nh':'#ns').setAttribute('aria-current','page');$('#pg-'+p).scrollTop=0}
-$('#nh').onclick=function(){showPage('home')};$('#ns').onclick=function(){showPage('set')};
+var PGS=['home','pro','set'],NV={home:'#nh',pro:'#np',set:'#ns'};
+function showPage(p){PGS.forEach(function(k){$('#pg-'+k).hidden=k!==p;$(NV[k]).classList.toggle('on',k===p);$(NV[k]).removeAttribute('aria-current')});$(NV[p]).setAttribute('aria-current','page');$('#pg-'+p).scrollTop=0;if(p==='pro')showPro()}
+$('#nh').onclick=function(){showPage('home')};$('#np').onclick=function(){showPage('pro')};$('#ns').onclick=function(){showPage('set')};
 function refreshSettings(){var acc=!!CU;$('#set-acc').hidden=!acc;$('#set-pw').hidden=!acc;$('#set-guest').hidden=acc;
  if(acc){var p=api.profile(CU)||{};$('#sfn').value=p.first||'';$('#sln').value=p.last||'';$('#sag').value=p.age||'';document.querySelectorAll('input[name=sg]').forEach(function(r){r.checked=r.value===p.gender});$('#sbio').value=p.bio||'';$('#sbc').textContent=$('#sbio').value.length+' / 150';$('#snk').textContent='@'+CU}
  var th=getp('fapp_theme','auto');document.querySelectorAll('input[name=th]').forEach(function(r){r.checked=r.value===th});
@@ -437,4 +466,120 @@ $('#scb').onclick=openLoc;
 $('#srcur').onclick=function(){CUR=['USD','EUR','UZS'];store(CK,JSON.stringify(CUR));if(R)renderCur('ok');toast('Valyutalar qaytarildi')};
 $('#sclr').onclick=function(){try{localStorage.removeItem(RK);localStorage.removeItem(WK)}catch(e){}R=null;W=null;renderCur('load');renderWx('load');loadRates();startWx();toast('Kesh tozalandi')};
 $('#slo').onclick=function(){api.logout();CU=null;showPage('home');view(false);show('auth')};
+
+/* ================= PROFIL VA DO’STLAR ================= */
+/* Demo adapter: ma’lumot shu qurilmada. Haqiqiy versiyada bu qism server (Supabase) bilan almashadi
+   va "faqat do’stlar ko’radi" qoidasi serverda (RLS) majburiy tekshiriladi. */
+var SOK='fapp_social';
+function soGet(){try{var s=JSON.parse(localStorage.getItem(SOK));if(s&&s.reqs&&s.fol&&s.posts)return s}catch(e){}return{reqs:[],fol:[],posts:[]}}
+function soSet(s){localStorage.setItem(SOK,JSON.stringify(s))}
+function soHas(a,f){return a.some(f)}
+api.person=function(n){var r=rd()[n];if(!r)return null;var p=r.profile||{};return{n:n,first:p.first||'',last:p.last||'',bio:p.bio||'',photo:p.photo||null}};
+api.following=function(n){return soGet().fol.filter(function(x){return x.a===n}).map(function(x){return x.b})};
+api.followers=function(n){return soGet().fol.filter(function(x){return x.b===n}).map(function(x){return x.a})};
+api.incoming=function(n){return soGet().reqs.filter(function(x){return x.t===n}).map(function(x){return x.f})};
+api.rel=function(me,o){var s=soGet();return soHas(s.fol,function(x){return x.a===me&&x.b===o})?'following':soHas(s.reqs,function(x){return x.f===me&&x.t===o})?'requested':soHas(s.reqs,function(x){return x.f===o&&x.t===me})?'incoming':'none'};
+api.accept=function(me,f){var s=soGet();s.reqs=s.reqs.filter(function(x){return !(x.f===f&&x.t===me)});if(!soHas(s.fol,function(x){return x.a===f&&x.b===me}))s.fol.push({a:f,b:me});soSet(s)};
+api.send=function(me,o){if(me===o||!rd()[o])throw new Error('bad');var r=api.rel(me,o);if(r==='incoming'){api.accept(me,o);return}if(r!=='none')return;var s=soGet();s.reqs.push({f:me,t:o});soSet(s)};
+api.cancel=function(me,o){var s=soGet();s.reqs=s.reqs.filter(function(x){return !(x.f===me&&x.t===o)});soSet(s)};
+api.decline=function(me,f){var s=soGet();s.reqs=s.reqs.filter(function(x){return !(x.f===f&&x.t===me)});soSet(s)};
+api.unfollow=function(me,o){var s=soGet();s.fol=s.fol.filter(function(x){return !(x.a===me&&x.b===o)});soSet(s)};
+api.search=function(me,q){return Object.keys(rd()).filter(function(n){return n!==me&&n.indexOf(q)>=0}).slice(0,20)};
+api.canSee=function(me,o){return me===o||soHas(soGet().fol,function(x){return x.a===me&&x.b===o})};
+api.posts=function(me,o){return api.canSee(me,o)?soGet().posts.filter(function(p){return p.by===o}).sort(function(a,b){return b.t-a.t}):null};
+api.getPost=function(me,id){var po=soGet().posts.filter(function(p){return p.id===id})[0];return po&&api.canSee(me,po.by)?po:null};
+api.addPost=function(me,po){var s=soGet();s.posts.push({id:'p'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),by:me,type:po.type,cap:po.cap,mid:po.mid,t:Date.now()});soSet(s)};
+api.delPost=function(me,id){var s=soGet(),po=s.posts.filter(function(p){return p.id===id})[0];if(!po||po.by!==me)throw new Error('bad');s.posts=s.posts.filter(function(p){return p.id!==id});soSet(s);return po};
+
+/* Rasm/video fayllari: IndexedDB (localStorage uchun juda katta) */
+var IDBP=null;
+function idb(){return IDBP||(IDBP=new Promise(function(ok,no){var r=indexedDB.open('fapp',1);r.onupgradeneeded=function(){r.result.createObjectStore('media')};r.onsuccess=function(){ok(r.result)};r.onerror=function(){no(r.error)}}))}
+function idbPut(k,b){return idb().then(function(d){return new Promise(function(ok,no){var t=d.transaction('media','readwrite');t.objectStore('media').put(b,k);t.oncomplete=ok;t.onerror=function(){no(t.error)};t.onabort=function(){no(t.error)}})})}
+function idbGet(k){return idb().then(function(d){return new Promise(function(ok,no){var r=d.transaction('media').objectStore('media').get(k);r.onsuccess=function(){ok(r.result)};r.onerror=function(){no(r.error)}})})}
+function idbDel(k){return idb().then(function(d){return new Promise(function(ok){var t=d.transaction('media','readwrite');t.objectStore('media').delete(k);t.oncomplete=ok;t.onerror=ok})})}
+var MU={};
+function mediaURL(mid){if(MU[mid])return Promise.resolve(MU[mid]);return idbGet(mid).then(function(b){return b?(MU[mid]=URL.createObjectURL(b)):null}).catch(function(){return null})}
+function resizeImg(f,max){return new Promise(function(ok,no){var u=URL.createObjectURL(f),im=new Image();im.onload=function(){var k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(function(b){b?ok(b):no()},'image/jpeg',.82)};im.onerror=function(){URL.revokeObjectURL(u);no()};im.src=u})}
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+var PS={cur:null,stack:[],re:null},PC={f:null,t:null,u:null},pLast=null;
+var IC_UP='<circle cx="10" cy="8" r="3.6"/><path d="M3 20c.7-3.6 3.4-5.4 7-5.4M17 8v6M14 11h6"/>',IC_LOCK='<rect x="5" y="11" width="14" height="10" rx="3"/><path d="M8 11V8a4 4 0 018 0v3"/>';
+function pav(p){return p&&p.photo?'<img alt="" src="'+p.photo+'">':AVD}
+function pname(p,n){return((p.first+' '+p.last).trim())||'@'+n}
+function updBadge(){var c=CU?api.incoming(CU).length:0,e=$('#pbd');e.hidden=!c;e.textContent=c>9?'9+':c}
+function pReset(){PS.stack=[];PS.cur=null;PS.re=null;Object.keys(MU).forEach(function(k){URL.revokeObjectURL(MU[k])});MU={};$('#pr-main').innerHTML='';if(!$('#psh').hidden)pClose()}
+
+/* Oyna */
+function pOpen(t,h,re){pLast=document.activeElement;$('#psht').textContent=t;$('#pshb').innerHTML=h;PS.re=re||null;$('#psh').hidden=false;var f=$('#pshb input:not([type=file]),#pshb textarea');(f||$('#pshx')).focus()}
+function pClose(){$('#psh').hidden=true;PS.re=null;if(PC.u){URL.revokeObjectURL(PC.u)}PC={f:null,t:null,u:null};if(pLast&&pLast.focus){try{pLast.focus()}catch(e){}}}
+$('#pshx').onclick=pClose;$('#psh').addEventListener('click',function(e){if(e.target===this)pClose()});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&!$('#psh').hidden)pClose()});
+
+/* Qatorlar va tugmalar */
+function prow(n,act){var p=api.person(n)||{first:'',last:''};return '<div class="prow"><button type="button" class="pgo" data-act="go" data-n="'+esc(n)+'"><span class="pa">'+pav(p)+'</span><span class="pt2"><b>'+esc(pname(p,n))+'</b><small>@'+esc(n)+'</small></span></button><div class="pac">'+(act||'')+'</div></div>'}
+function relBtn(n){var r=api.rel(CU,n),a='data-n="'+esc(n)+'"';return r==='none'?'<button type="button" class="sb2 fill" data-act="send" '+a+'>Do’st bo’lish</button>':r==='requested'?'<button type="button" class="sb2 ghost" data-act="cancel" '+a+'>So’rov yuborildi</button>':r==='incoming'?'<button type="button" class="sb2 fill" data-act="accept" '+a+'>Qabul qilish</button>':'<span class="tag">Obuna bo’lgansiz</span>'}
+function drawSearch(){var q=$('#pqs').value.trim().toLowerCase(),el=$('#psr');if(q.length<2){el.innerHTML='<p class="em">Nickname yozing (kamida 2 ta belgi)</p>';return}var l=api.search(CU,q);el.innerHTML=l.length?l.map(function(n){return prow(n,relBtn(n))}).join(''):'<p class="em">Hech kim topilmadi</p>'}
+function reqHTML(){var l=api.incoming(CU);return l.length?l.map(function(n){return prow(n,'<button type="button" class="sb2 fill" data-act="accept" data-n="'+esc(n)+'">Qabul</button><button type="button" class="sb2 ghost" data-act="decline" data-n="'+esc(n)+'">Rad etish</button>')}).join(''):'<p class="em">Yangi so’rov yo’q</p>'}
+function listHTML(k){var l=k==='lf'?api.following(CU):api.followers(CU);return l.length?l.map(function(n){return prow(n,k==='lf'?'<button type="button" class="sb2 ghost" data-act="unf" data-n="'+esc(n)+'">Bekor qilish</button>':'')}).join(''):'<p class="em">Hali hech kim yo’q</p>'}
+
+/* Profil sahifasi */
+function showPro(){PS.stack=[];renderPro(CU)}
+function thumb(po){return '<button type="button" data-act="post" data-id="'+po.id+'" aria-label="Postni ochish">'+(po.type==='video'?'<video muted playsinline preload="metadata" data-mid="'+po.mid+'"></video><svg class="i vb" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>':'<img alt="" data-mid="'+po.mid+'">')+'</button>'}
+function renderPro(n){
+ var g=!CU;$('#pr-guest').hidden=!g;$('#pr-main').hidden=g;if(g)return;
+ var p=api.person(n);if(!p){n=CU;p=api.person(n)}if(!p)return;
+ PS.cur=n;var own=n===CU,rel=own?'self':api.rel(CU,n),nf=api.following(n).length,nr=api.followers(n).length,inc=own?api.incoming(CU).length:0;
+ var cnt=own?'<button type="button" data-act="lf"><b>'+nf+'</b><span>Obunalarim</span></button><button type="button" data-act="lr"><b>'+nr+'</b><span>Obunachilarim</span></button>':'<div><b>'+nf+'</b><span>Obunalari</span></div><div><b>'+nr+'</b><span>Obunachilari</span></div>';
+ var act=own?'<div class="pact"><button type="button" class="sb2" data-act="add">'+ic(IC_UP)+'Do’st qo’shish</button><button type="button" class="sb2 ghost" data-act="reqs">So’rovlar'+(inc?' ('+inc+')':'')+'</button></div>'
+  :'<div class="pact">'+(rel==='none'?'<button type="button" class="sb2 fill" data-act="send" data-n="'+esc(n)+'">Do’st bo’lish</button>':rel==='requested'?'<button type="button" class="sb2 ghost" data-act="cancel" data-n="'+esc(n)+'">So’rov yuborildi · Bekor qilish</button>':rel==='incoming'?'<button type="button" class="sb2 fill" data-act="accept" data-n="'+esc(n)+'">Qabul qilish</button><button type="button" class="sb2 ghost" data-act="decline" data-n="'+esc(n)+'">Rad etish</button>':'<span class="tag">Obuna bo’lgansiz</span><button type="button" class="sb2 ghost" data-act="unf" data-n="'+esc(n)+'">Bekor qilish</button>')+(!own&&api.rel(n,CU)==='following'?'<span class="tag">Sizga obuna</span>':'')+'</div>';
+ var body;if(own||rel==='following'){var l=api.posts(CU,n)||[];body=l.length?'<div class="pgrid">'+l.map(thumb).join('')+'</div>':'<p class="em">'+(own?'Hali post yo’q. Rasm yoki video joylang.':'Hali post yo’q.')+'</p>'}
+ else body='<div class="lock">'+ic(IC_LOCK)+'<b>Postlar yashirin</b><span>Faqat do’stlar ko’radi. Ko’rish uchun do’st bo’lish so’rovini yuboring.</span></div>';
+ $('#pr-main').innerHTML=(own?'':'<button type="button" class="pbk" data-act="back">'+ic('<path d="M15 5l-7 7 7 7"/>')+'Orqaga</button>')
+  +'<div class="phd"><div class="pav">'+pav(p)+'</div><div class="pcn">'+cnt+'</div></div>'
+  +'<div><div class="pnm2">'+esc(pname(p,n))+'</div><div class="pnk">@'+esc(n)+'</div>'+(p.bio?'<p class="pbio">'+esc(p.bio)+'</p>':'')+'</div>'+act
+  +'<div class="psh2"><h2 class="st">Postlar</h2>'+(own?'<button type="button" class="sb2 fill" data-act="compose">'+ic('<path d="M12 5v14M5 12h14"/>')+'Joylash</button>':'')+'</div>'+body;
+ document.querySelectorAll('#pr-main [data-mid]').forEach(function(el){mediaURL(el.dataset.mid).then(function(u){if(u&&el.isConnected)el.src=el.tagName==='VIDEO'?u+'#t=0.1':u})});
+ $('#pg-pro').scrollTop=0}
+
+/* Post: joylash va ko’rish */
+function openCompose(){pOpen('Yangi post','<button type="button" class="sb2" data-act="pickf">Rasm yoki video tanlash</button><input id="pcf" type="file" accept="image/*,video/*" hidden><div class="pcp" id="pcp"></div><textarea id="pcc" maxlength="200" rows="2" placeholder="Izoh (ixtiyoriy)" aria-label="Izoh"></textarea><div class="msg" id="pcm" role="status"></div><button type="button" class="sbtn" id="pcb" data-act="publish" disabled>Joylash</button><p class="sn" style="margin:0">Postlarni faqat sizga obuna bo’lgan do’stlaringiz ko’radi.</p>')}
+function onPick(inp){var f=inp.files[0],m=$('#pcm');inp.value='';if(!f)return;var im=/^image\//.test(f.type),vd=/^video\//.test(f.type);
+ if(!im&&!vd){say(m,'Faqat rasm yoki video tanlang','bad');return}
+ if(f.size>(im?25e6:60e6)){say(m,im?'Rasm 25 MB dan oshmasin':'Video 60 MB dan oshmasin','bad');return}
+ if(PC.u)URL.revokeObjectURL(PC.u);PC={f:f,t:im?'image':'video',u:URL.createObjectURL(f)};
+ $('#pcp').innerHTML=im?'<img alt="" src="'+PC.u+'">':'<video controls playsinline muted src="'+PC.u+'"></video>';$('#pcb').disabled=false;say(m,'')}
+async function publish(){if(!PC.f)return;var b=$('#pcb'),m=$('#pcm');b.disabled=true;say(m,'Joylanmoqda…');
+ try{var blob=PC.t==='image'?await resizeImg(PC.f,1080):PC.f,mid='m'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);await idbPut(mid,blob);api.addPost(CU,{type:PC.t,cap:$('#pcc').value.trim(),mid:mid});pClose();renderPro(CU);toast('Post joylandi')}
+ catch(e){say(m,'Joylab bo’lmadi. Fayl formati qo’llab-quvvatlanmaydi yoki joy yetarli emas','bad');b.disabled=false}}
+function openPost(id){var po=api.getPost(CU,id);if(!po){toast('Post topilmadi');return}
+ var d=new Date(po.t).toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});
+ pOpen('@'+po.by,'<div class="pcp" id="pvm"></div>'+(po.cap?'<p class="pbio" style="margin:0">'+esc(po.cap)+'</p>':'')+'<small class="tag">'+d+'</small>'+(po.by===CU?'<button type="button" class="sb2 dg" data-act="delp" data-id="'+po.id+'">O’chirish</button>':''));
+ mediaURL(po.mid).then(function(u){var el=$('#pvm');if(!el)return;el.innerHTML=!u?'<p class="em">Fayl topilmadi</p>':po.type==='video'?'<video controls playsinline src="'+u+'"></video>':'<img alt="" src="'+u+'">'})}
+
+/* Tugmalar */
+function after(){if(PS.re)PS.re();renderPro(PS.cur);updBadge()}
+async function pAct(e){var b=e.target.closest('[data-act]');if(!b)return;var a=b.dataset.act,n=b.dataset.n;
+ try{
+ if(a==='go'){pClose();PS.stack.push(PS.cur);renderPro(n)}
+ else if(a==='back'){renderPro(PS.stack.pop()||CU)}
+ else if(a==='send'){api.send(CU,n);toast('So’rov yuborildi');after()}
+ else if(a==='cancel'){api.cancel(CU,n);after()}
+ else if(a==='accept'){api.accept(CU,n);toast('Qabul qilindi');after()}
+ else if(a==='decline'){api.decline(CU,n);after()}
+ else if(a==='unf'){api.unfollow(CU,n);toast('Obuna bekor qilindi');after()}
+ else if(a==='add'){pOpen('Do’st qo’shish','<input id="pqs" type="text" placeholder="Nickname bo’yicha qidiring" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Nickname bo’yicha qidirish"><div id="psr" class="pshb"></div>',drawSearch);drawSearch()}
+ else if(a==='reqs'){pOpen('Do’stlik so’rovlari',reqHTML(),function(){$('#pshb').innerHTML=reqHTML()})}
+ else if(a==='lf'||a==='lr'){pOpen(a==='lf'?'Obunalarim':'Obunachilarim',listHTML(a),function(){$('#pshb').innerHTML=listHTML(a)})}
+ else if(a==='compose'){openCompose()}
+ else if(a==='pickf'){$('#pcf').click()}
+ else if(a==='publish'){publish()}
+ else if(a==='post'){openPost(b.dataset.id)}
+ else if(a==='delp'){if(!b.dataset.sure){b.dataset.sure='1';b.textContent='Aniq o’chirilsinmi? Yana bosing';setTimeout(function(){b.dataset.sure='';b.textContent='O’chirish'},4000);return}
+  var po=api.delPost(CU,b.dataset.id);await idbDel(po.mid);if(MU[po.mid]){URL.revokeObjectURL(MU[po.mid]);delete MU[po.mid]}pClose();renderPro(CU);toast('Post o’chirildi')}
+ else if(a==='gsign'){api.logout();CU=null;pReset();showPage('home');view(true);show('auth')}
+ }catch(er){toast('Xatolik yuz berdi. Qayta urinib ko’ring')}}
+$('#pg-pro').addEventListener('click',pAct);$('#pshb').addEventListener('click',pAct);
+$('#pshb').addEventListener('input',function(e){if(e.target.id==='pqs')drawSearch()});
+$('#pshb').addEventListener('change',function(e){if(e.target.id==='pcf')onPick(e.target)});
+$('#slo').addEventListener('click',pReset);$('#sgl').addEventListener('click',pReset);
 </script></body></html>
